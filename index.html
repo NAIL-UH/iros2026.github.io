@@ -39,14 +39,29 @@
       justify-content: center;
       border-radius: 8px;
     }
-    .carousel-container {
-      padding: 0 0 60px 0;
-      overflow: hidden;
-    }
     .video-container {
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 0 auto 15px auto;
+      max-width: 90%;
+    }
+    .summary-video-container {
+      max-width: 80%;
+      margin: 0 auto 15px auto;
+    }
+    .plot-container img {
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
+    .comparison-grid h5 {
+      margin-bottom: 10px;
+    }
+    .plot-section-title {
+      margin-top: 30px;
       margin-bottom: 15px;
     }
   </style>
@@ -144,9 +159,6 @@
           <p>
             Standard Conformal Prediction (CP) assumes exchangeability over the entire state space, yielding a global error bound that restricts mobility in safe regions and may under-approximate risk near boundaries. We use a Mondrian taxonomy to partition the state space into distinct risk groups based on proximity to the FOV limits. This allows us to compute <b>formation-conditioned uncertainty quantiles</b> that accurately reflect the heavier error tails present in high-risk zones.
           </p>
-          <div class="structure-image">
-            <img src="./static/images/Fig3_Distributions.jpg" alt="Empirical Score Distributions">
-          </div>
         </div>
       </div>
 
@@ -166,109 +178,107 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Results from Gazebo Simulations</h2>
+    <h2 class="title is-3 has-text-centered">Simulation Results</h2>
     
-    <h3 class="title is-4">Simulation 1: Two-Robot Leader-Follower in Oval Track</h3>
-    <div class="columns is-vcentered interpolation-panel">
-      <div class="column has-text-centered">
-        <h5><b>With Adaptive Conformal CBF</b><br>(In-View Safe Tracking)</h5>
-        <h5 style="font-size:30px;">✅</h5>
-        <div class="video-container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Summary Demonstration</h3>
+        <div class="video-container summary-video-container">
           <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/2Oval-with.mp4" type="video/mp4">
+            <source src="./static/videos/Summary_Simulation.mp4" type="video/mp4">
           </video>
         </div>
-      </div>
-      <div class="column has-text-centered">
-        <h5><b>Global CP / No CBF</b><br>(Conservative/Crash)</h5>
-        <h5 style="font-size:30px;">❌</h5>
-        <div class="video-container">
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/2Oval-without.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-    <div class="content has-text-justified">
-      <p>
-        The first simulation evaluates the proposed scheme in an oval track environment. The proposed approach adaptively activates the CBF-QP safety filter to maintain the leader within its FOV, outperforming global CP baselines that are unnecessarily conservative and standard controllers that fail to maintain visibility.
-      </p>
-    </div>
-
-    <br>
-    <h3 class="title is-4">Simulation 2: Generalization in Outdoor Residence Environment</h3>
-    <div class="columns is-vcentered interpolation-panel">
-      <div class="column has-text-centered">
-        <h5><b>With Adaptive Conformal CBF</b></h5>
-        <h5 style="font-size:30px;">✅</h5>
-        <div class="video-container">
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/2Outdoor-with.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="column has-text-centered">
-        <h5><b>Global CP / No CBF</b></h5>
-        <h5 style="font-size:30px;">❌</h5>
-        <div class="video-container">
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/2Outdoor-without.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-    <div class="content has-text-justified">
-      <p>
-        Conducted in an unseen outdoor residence environment, this test shows the framework successfully bounding perception errors dynamically despite shifting environmental domains, ensuring safe leader-follower formation.
-      </p>
-    </div>
-
-    <br>
-    <h3 class="title is-4">Simulation 3: Three-Robot Leader-Follower Platoon</h3>
-    <div class="columns is-vcentered interpolation-panel">
-      <div class="column has-text-centered">
-        <h5><b>With Adaptive Conformal CBF</b></h5>
-        <h5 style="font-size:30px;">✅</h5>
-        <div class="video-container">
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/3Oval-with.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="column has-text-centered">
-        <h5><b>Global CP / No CBF</b></h5>
-        <h5 style="font-size:30px;">❌</h5>
-        <div class="video-container">
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/3Oval-without.mp4" type="video/mp4">
-          </video>
+        <div class="content has-text-justified">
+          <p>
+            This summary video demonstrates the proposed Formation-Aware Adaptive Conformalized Perception framework in a Gazebo simulation. As the leader-follower multi-robot system maneuvers, the Risk-Aware Mondrian CP dynamically adjusts the perception uncertainty bounds. The Conformal CBF-QP safely intervenes when the leader approaches the edge of the follower's Field of View (FOV), successfully maintaining visibility without being overly conservative.
+          </p>
         </div>
       </div>
     </div>
 
-    <hr>
-    <h2 class="title is-3">Hardware Experiments</h2>
-    <h3 class="title is-4">Experiments with Two ROSbot 2 Pro Mobile Robots</h3>
-    <div class="columns is-vcentered interpolation-panel">
-      <div class="column has-text-centered">
-        <h5><b>With Adaptive Conformal CBF</b></h5>
-        <h5 style="font-size:30px;">✅</h5>
-        <div class="video-container">
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/Exp1_with.mp4" type="video/mp4">
-          </video>
+    <br><br>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Comparison of Bounding Strategies</h3>
+        <div class="columns is-multiline comparison-grid">
+          
+          <div class="column is-half">
+            <h5><b>High Risk Bound</b><br>(Conservative Global CP)</h5>
+            <div class="video-container">
+              <video autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/HighRiskBound.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="column is-half">
+            <h5><b>Low Risk Bound</b><br>(Aggressive Global CP)</h5>
+            <div class="video-container">
+              <video autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/LowRiskBound.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="column is-half">
+            <h5><b>Nominal (No Bound)</b><br>(Standard CBF/No CP)</h5>
+            <div class="video-container">
+              <video autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/NominalBound.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <div class="column is-half">
+            <h5><b>Risk-Aware Bound</b><br>(Proposed Adaptive CP) <span style="font-size:20px;">✅</span></h5>
+            <div class="video-container">
+              <video autoplay controls muted loop playsinline width="100%">
+                <source src="./static/videos/RiskAwareBound.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
         </div>
-      </div>
-      <div class="column has-text-centered">
-        <h5><b>Global CP / No CBF</b></h5>
-        <h5 style="font-size:30px;">❌</h5>
-        <div class="video-container">
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/Exp1_without.mp4" type="video/mp4">
-          </video>
+        <div class="content has-text-justified">
+          <p>
+            The videos above compare the proposed <b>Risk-Aware Bound</b> against baseline strategies. Relying on a static <b>High Risk Bound</b> is overly conservative, unnecessarily restricting normal formation maneuvers and reducing performance. Conversely, a <b>Low Risk Bound</b> or <b>Nominal</b> approach fails to account for the heavy-tailed perception errors near the FOV limits, ultimately leading to constraint violations (losing the leader from the camera view). Our adaptive Mondrian CP method successfully balances performance and safety by tightening bounds only when necessary.
+          </p>
         </div>
       </div>
     </div>
+
+    <br><br>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Evaluation Metrics</h3>
+        
+        <h4 class="title is-5 plot-section-title">Time-Series Analysis</h4>
+        <div class="plot-container">
+          <img src="./static/images/TimeSeries_Plots.png" alt="Time Series Plots showing tracking error, dynamic bounds, and control inputs">
+        </div>
+        <div class="content has-text-justified" style="margin-top: 15px;">
+          <p>
+            The time-series plots illustrate the dynamic behavior of our proposed Risk-Aware Bound over the course of the simulation. As the robot transitions between safe and risky configurations, the Mondrian CP algorithm dynamically tightens the perception uncertainty margins. This targeted conservatism ensures that the Control Barrier Function cleanly enforces visibility constraints near the FOV boundaries, while permitting smooth control inputs and low tracking errors in nominal regions.
+          </p>
+        </div>
+
+        <br>
+
+        <h4 class="title is-5 plot-section-title">Aggregate Summary</h4>
+        <div class="plot-container">
+          <img src="./static/images/Summary_Plots.png" alt="Summary bar charts and metrics comparing bounding strategies">
+        </div>
+        <div class="content has-text-justified" style="margin-top: 15px;">
+          <p>
+            The summary metrics aggregate the performance across the different bounding strategies to highlight the trade-offs between safety and tracking efficiency. Our <b>Risk-Aware Adaptive CP</b> eliminates out-of-view failures (which plague the Low Risk and Nominal baselines) without incurring the excessive tracking error and controller feasibility issues associated with the strictly conservative High Risk Bound.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
