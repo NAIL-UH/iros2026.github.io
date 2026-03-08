@@ -39,6 +39,11 @@
       justify-content: center;
       border-radius: 8px;
     }
+    .method-image {
+      margin-top: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
     .video-container {
       border-radius: 8px;
       overflow: hidden;
@@ -153,25 +158,31 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
+      
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Risk-Aware Mondrian CP</h2>
           <p>
             Standard Conformal Prediction (CP) assumes exchangeability over the entire state space, yielding a global error bound that restricts mobility in safe regions and may under-approximate risk near boundaries. We use a Mondrian taxonomy to partition the state space into distinct risk groups based on proximity to the FOV limits. This allows us to compute <b>formation-conditioned uncertainty quantiles</b> that accurately reflect the heavier error tails present in high-risk zones.
           </p>
+          <div class="structure-image method-image">
+            <img src="./static/images/Fig3_Distributions.png" alt="Empirical Score Distributions across Risk Regions">
+          </div>
         </div>
       </div>
 
       <div class="column">
-        <h2 class="title is-3">Conformal CBF-QP Integration</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              Directly switching between uncertainty bounds across different risk regions introduces discontinuities in the Control Barrier Function constraints. To maintain smooth control inputs while preserving statistical coverage guarantees, we introduce a <b>continuous margin transition</b> that interpolates between adjacent quantiles. This tightened, Lipschitz-continuous barrier ensures strict FOV constraint satisfaction while maximizing optimization feasibility.
-            </p>
+        <div class="content">
+          <h2 class="title is-3">Conformal CBF-QP Integration</h2>
+          <p>
+            Directly switching between uncertainty bounds across different risk regions introduces discontinuities in the Control Barrier Function constraints. To maintain smooth control inputs while preserving statistical coverage guarantees, we introduce a <b>continuous margin transition</b> that interpolates between adjacent quantiles. This tightened, Lipschitz-continuous barrier ensures strict FOV constraint satisfaction while maximizing optimization feasibility.
+          </p>
+          <div class="structure-image method-image">
+            <img src="./static/images/Fig5_SmoothMargin.jpg" alt="Continuous Margin Transition for CBF-QP">
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -256,7 +267,7 @@
         
         <h4 class="title is-5 plot-section-title">Time-Series Analysis</h4>
         <div class="plot-container">
-          <img src="./static/images/TimeSeries_Plots.png" alt="Time Series Plots showing tracking error, dynamic bounds, and tracking performance">
+          <img src="./static/images/TimeSeries_Plots.png" alt="Time Series Plots showing tracking error, dynamic bounds, and control inputs">
         </div>
         <div class="content has-text-justified" style="margin-top: 15px;">
           <p>
