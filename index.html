@@ -2,64 +2,34 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Formation-Aware Adaptive Conformalized Perception for Safe Leader–Follower Multi-Robot Systems."> 
-  <meta name="keywords" content="Conformal Prediction, CBF, Adaptive">
+  <meta name="description" content="Formation-Aware Adaptive Conformalized Perception for Safe Leader-Follower Multi-Robot Systems."> 
+  <meta name="keywords" content="Conformal Prediction, CBF, Adaptive, Leader-Follower, Perception Safety, Mondrian CP">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Distributed Perception Aware Safe Leader Follower System via Control Barrier Methods</title>
+  <title>Formation-Aware Adaptive Conformalized Perception</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- Not sure what this is for-->
-  <script async src=""></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/icon.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@2.0.4/dist/css/bulma-carousel.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@2.0.4/dist/js/bulma-carousel.min.js"></script>
 
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    bulmaCarousel.attach('#results-carousel', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: false // Videos play automatically, so disable autoplay for carousel
-    });
-  });
-  </script>
-  
   <style>
     .cover-image img {
-      max-width: 50%;
+      max-width: 60%;
       height: auto;
       display: block;
       margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .structure-image img {
       max-width: 100%;
@@ -67,17 +37,19 @@
       display: flex;
       margin: 0 auto;
       justify-content: center;
+      border-radius: 8px;
     }
     .carousel-container {
       padding: 0 0 60px 0;
       overflow: hidden;
     }
-    
-    .carousel-inner {
-      overflow: visible;
+    .video-container {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
     }
   </style>
-  
 </head>
 <body>
 
@@ -86,50 +58,31 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Formation-Aware Adaptive Conformalized Perception for Safe Leader–Follower Multi-Robot Systems</h1>
+          <h1 class="title is-1 publication-title">Formation-Aware Adaptive Conformalized Perception for Safe Leader-Follower Multi-Robot Systems</h1>
+          
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/Anon/">Anonymous Authours</a><sup>1</sup>,</span>
+            <span class="author-block">Anonymous Authors<sup>1</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Anonymous</span>
+            <span class="author-block"><sup>1</sup>Anonymous Institution (Under Double-Blind Review)</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/Anonymous"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/Anonymous"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code (Anonymous)</span>
                 </a>
               </span>
-
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/Anonymous/Anonymous"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -137,243 +90,196 @@
   </div>
 </section>
 
-  <!-- Paper Image. -->
-  <div class="columns is-centered has-text-centered">
-    <div class="column is-half-width">
-      <div class="cover-image">
-        <img src="https://raw.githubusercontent.com/NAIL-UH/iros2026.github.io/main/static/images/CoverImage.jpg" alt="Cover Image">
-      </div>
+<div class="columns is-centered has-text-centered">
+  <div class="column is-half-width">
+    <div class="cover-image">
+      <img src="./static/images/Fig1_Concept.jpg" alt="Concept Illustration">
     </div>
   </div>
+</div>
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            fffffffffff
+            This paper considers the perception safety problem in distributed vision-based leader-follower formations, where each robot uses onboard perception to estimate relative states, track desired setpoints, and keep the leader within its camera field of view (FOV). Safety is challenging due to heteroscedastic perception errors and the coupling between formation maneuvers and visibility constraints.
           </p>
           <p>
-            ffffffffffff
+            We propose a distributed, formation-aware adaptive conformal prediction method based on Risk-Aware Mondrian CP to produce formation-conditioned uncertainty quantiles. The resulting bounds tighten in high-risk configurations (near FOV limits) and relax in safer regions. We integrate these bounds into a Formation-Aware Conformal CBF-QP with a smooth margin to enforce visibility while maintaining feasibility and tracking performance. 
           </p>
           <p>
-            fffffffff <a href="https://husarion.com/tutorials/howtostart/rosbot2r-quick-start/"> <b> Husarion ROSbot 2 Pro  </b></a> fffff.
+            Gazebo simulations show improved formation success rates and tracking accuracy over non-adaptive (global) CP baselines that ignore formation-dependent visibility risk, while preserving finite-sample probabilistic safety guarantees.
           </p>
         </div>
       </div>
     </div>
-     </div>
-    <!--/ Abstract. -->
+  </div>
 </section>
 
-  <section class="section">
+<section class="section">
   <div class="container is-max-desktop">
-    <!-- Paper Structure. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Perception-aware CBF based Leader-follower Control</h2>
+        <h2 class="title is-3">Risk-Aware Conformal Control Architecture</h2>
         <div class="structure-image">
-          <img src="https://raw.githubusercontent.com/NAIL-UH/iros2026./main/static/images/BlockDiagram.jpg" alt="Block Diagram Image">
+          <img src="./static/images/Fig2_Architecture.jpg" alt="System Architecture Diagram">
         </div>
-            <p style="text-align: left;">
- We propose a novel perception-aware, distributed leader-follower control scheme that explicitly incorporates camera FOV limitations as state constraints. 
-              A CBF-QP framework is employed to enforce forward invariance of a safety set defined by these constraints. 
-              Deep Neural network (DNN) based and double bounding boxes (DBB) based estimators combined with temporal filters are introduced to obtain reliable estimates for leader-follower states across different environments. 
-          </p>
+        <p style="text-align: left; margin-top: 15px;">
+          Our framework integrates perception uncertainty directly into the safety layer of a leader-follower system. Because perception errors are highly heteroscedastic (increasing near FOV boundaries), relying on a single global uncertainty bound is overly conservative. We solve this by leveraging a <b>Risk-Aware Mondrian Conformal Predictor</b> to generate state-dependent uncertainty bounds, which are then used to parameterize a <b>Formation-Aware Conformal CBF-QP</b>.
+        </p>
       </div>
     </div>
-    <!--/ Paper video. -->
   </div>
-  </section>
+</section>
   
-    <section class="section">
-        <div class="container is-max-desktop">
+<section class="section">
+  <div class="container is-max-desktop">
     <div class="columns is-centered">
-
-      <!-- DNN. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">DNN Angle Estimation</h2>
+          <h2 class="title is-3">Risk-Aware Mondrian CP</h2>
           <p>
-           A DNN-based estimator, combined with a linear temporal filter, maps real-time image data to angle estimates by framing the estimation task as an image classification problem.
+            Standard Conformal Prediction (CP) assumes exchangeability over the entire state space, yielding a global error bound that restricts mobility in safe regions and may under-approximate risk near boundaries. We use a Mondrian taxonomy to partition the state space into distinct risk groups based on proximity to the FOV limits. This allows us to compute <b>formation-conditioned uncertainty quantiles</b> that accurately reflect the heavier error tails present in high-risk zones.
           </p>
           <div class="structure-image">
-            <img src="https://raw.githubusercontent.com/NAIL-UH/iros2026./main/static/images/DNN.jpg" alt="DNN Image">
+            <img src="./static/images/Fig3_Distributions.jpg" alt="Empirical Score Distributions">
           </div>
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">DBB Distance Estimation</h2>
+        <h2 class="title is-3">Conformal CBF-QP Integration</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              The DBB method uses a CSRT tracker on the RGB image to generate a red bounding box that locates the leader, then scales it to half its dimensions on the depth image as a green bounding box to estimate the distance.
+              Directly switching between uncertainty bounds across different risk regions introduces discontinuities in the Control Barrier Function constraints. To maintain smooth control inputs while preserving statistical coverage guarantees, we introduce a <b>continuous margin transition</b> that interpolates between adjacent quantiles. This tightened, Lipschitz-continuous barrier ensures strict FOV constraint satisfaction while maximizing optimization feasibility.
             </p>
-            <div class="structure-image">
-              <img src="https://raw.githubusercontent.com/NAIL-UH/iros2026./main/static/images/CSRT.png" alt="CSRT Image">
-            </div>
-          </div>
-         </div>
-        </div>
-      </div>
-    <!--/ Matting. -->
-  </section>
-
-        <!-- Simulation -->
-    <section class="section">
-        <div class="container is-max-desktop">
-        <h2 class="title is-3">Results from Gazebo Simulations</h2>
-    
-        <h3 class="title is-4">Simulation 1: Two-Robot Leader-follower Formation in Oval Track Environment</h3>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column  has-text-centered">
-            <h5><b>With CBF</b><br>(In-View Safe Tracking)<br></h5>
-            <h5 style="font-size:30px;">✅</h5>
-            <video autoplay controls muted loop playsinline width="80%">
-              <source src="static/videos/2Oval-with.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column  has-text-centered">
-            <h5><b>Without CBF</b><br>(Out-of-View Crash)<br></h5>
-            <h5 style="font-size:30px;">❌</h5>
-            <video autoplay controls muted loop playsinline width="80%">
-              <source src="static/videos/2Oval-without.mp4" type="video/mp4">
-            </video>
           </div>
         </div>
-        <div class="content has-text-justified">
-          <img src="static/images/2Oval.png" />
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <p>
-                The first simulation evaluates the proposed perception-aware safe leader-follower control scheme in an oval track environment and is compared to 
-                a baseline that only applies the leader-follower formation controller. The system is evaluated in three stages: (i) an initial straight-line formation
-                where the follower remains directly behind the leader, (ii) a formation transition where the follower moves to the side of the leader, introducing a
-                conflict between control objectives and safety constraints, and (iii) a return to the initial straight-line formation. The proposed approach successfully
-                resolve this conflict by adaptively activating the CBF-QP safety filter to maintain the leader within its FOV, while the baseline system fails to do so, resulting
-                in the loss of the leader causing instability. These results demonstrate the control scheme's effectiveness in maintaining formation and safety constraints.
-                
-              </p>
-            </tr>
-          </table>
-        </div>
-    
-        <h3 class="title is-4">Simulation 2: Two-robot Leader-follower Formation in Residence Environment</h3>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column  has-text-centered">
-            <h5><b>With CBF</b><br>(In-View Safe Tracking)<br></h5>
-            <h5 style="font-size:30px;">✅</h5>
-            <video autoplay controls muted loop playsinline width="80%">
-              <source src="static/videos/2Outdoor-with.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column  has-text-centered">
-            <h5><b>Without CBF</b><br>(Out-of-View Crash)<br></h5>
-            <h5 style="font-size:30px;">❌</h5>
-            <video autoplay controls muted loop playsinline width="80%">
-              <source src="static/videos/2Outdoor-without.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="content has-text-justified">
-          <img src="static/images/2Outdoor.png" />
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <p>
-                The second simulation evaluates the generalization capability of the proposed perception-aware control scheme and the DNN-based estimator, the second experiment is conducted
-                in an unseen outdoor residence environment. Despite being trained exclusively in the oval track setting, the estimator is able to generalize its environement effectively, providing
-                an accurate estimation that enables the proposed controller to maintain desired formation and safety constraints. The baseline approach, fails to adapt to the environmental differences,
-                leading to the loss of the leader causing instability. This simulation validates the robustness of the proposed estimator to ensure a robust and reliable leader-follower formation.
-              </p>
-            </tr>
-          </table>
-        </div>
-    
-        <h3 class="title is-4">Simulation 3: Three-robot Leader-follower Formation in an Oval Track Environment</h3>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column  has-text-centered">
-            <h5><b>With CBF</b><br>(In-View Safe Tracking)<br></h5>
-            <h5 style="font-size:30px;">✅</h5>
-            <video autoplay controls muted loop playsinline width="80%">
-              <source src="static/videos/3Oval-with.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column  has-text-centered">
-            <h5><b>Without CBF</b><br>(Out-of-View Crash)<br></h5>
-            <h5 style="font-size:30px;">❌</h5>
-            <video autoplay controls muted loop playsinline width="80%">
-              <source src="static/videos/3Oval-without.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="content has-text-justified">
-          <img src="static/images/3Oval.png" />
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <p>
-                The third experiment evaluates the proposed control scheme in a three-robot leader-follower formation within the oval track environment. In this setting,
-                the last robot is susceptible to the safety violations due to the error propagation and disturbances caused by the preceding robots. This demonstration shows
-                that the robot not utilizing the proposed approach fails almost immediately in Stage 1. In contrast, the proposed approach successfully preserves the safety.
-              </p>
-            </tr>
-          </table>
-        </div>
-
-        <!-- Experiment. -->
-        <h2 class="title is-3">Experiments with Two ROSbot Pro Mobile Robots</h2>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column  has-text-centered">
-            <h5><b>With CBF</b><br>(In-View Safe Tracking)<br></h5>
-            <h5 style="font-size:30px;">✅</h5>
-            <video autoplay controls muted loop playsinline width="80%">
-              <source src="static/videos/Exp1_with.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="column  has-text-centered">
-            <h5><b>Without CBF</b><br>(Out-of-View Unsafe Tracking)<br></h5>
-            <h5 style="font-size:30px;">❌</h5>
-            <video autoplay controls muted loop playsinline width="80%">
-              <source src="static/videos/Exp1_without.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="content has-text-justified">
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <p>
-               Experiments using two ROSbot Pro 2 robots confirm that our perception-aware leader-follower control scheme consistently keeps the leader within the follower's field of view, ensuring safe, in-view tracking. In contrast, the traditional formation control strategy without CBF loses the leader, resulting in unsafe, out-of-view tracking. 
-                Note that these experiments employed an OptiTrack Motion Capture System for state estimation as a proof-of-concept, with future tests incorporating DNN and DBB-based estimators.
-              </p>
-            </tr>
-          </table>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
     </div>
-      </div>
-    </div>
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Results from Gazebo Simulations</h2>
+    
+    <h3 class="title is-4">Simulation 1: Two-Robot Leader-Follower in Oval Track</h3>
+    <div class="columns is-vcentered interpolation-panel">
+      <div class="column has-text-centered">
+        <h5><b>With Adaptive Conformal CBF</b><br>(In-View Safe Tracking)</h5>
+        <h5 style="font-size:30px;">✅</h5>
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2Oval-with.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <h5><b>Global CP / No CBF</b><br>(Conservative/Crash)</h5>
+        <h5 style="font-size:30px;">❌</h5>
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2Oval-without.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        The first simulation evaluates the proposed scheme in an oval track environment. The proposed approach adaptively activates the CBF-QP safety filter to maintain the leader within its FOV, outperforming global CP baselines that are unnecessarily conservative and standard controllers that fail to maintain visibility.
+      </p>
+    </div>
+
+    <br>
+    <h3 class="title is-4">Simulation 2: Generalization in Outdoor Residence Environment</h3>
+    <div class="columns is-vcentered interpolation-panel">
+      <div class="column has-text-centered">
+        <h5><b>With Adaptive Conformal CBF</b></h5>
+        <h5 style="font-size:30px;">✅</h5>
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2Outdoor-with.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <h5><b>Global CP / No CBF</b></h5>
+        <h5 style="font-size:30px;">❌</h5>
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2Outdoor-without.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        Conducted in an unseen outdoor residence environment, this test shows the framework successfully bounding perception errors dynamically despite shifting environmental domains, ensuring safe leader-follower formation.
+      </p>
+    </div>
+
+    <br>
+    <h3 class="title is-4">Simulation 3: Three-Robot Leader-Follower Platoon</h3>
+    <div class="columns is-vcentered interpolation-panel">
+      <div class="column has-text-centered">
+        <h5><b>With Adaptive Conformal CBF</b></h5>
+        <h5 style="font-size:30px;">✅</h5>
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/3Oval-with.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <h5><b>Global CP / No CBF</b></h5>
+        <h5 style="font-size:30px;">❌</h5>
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/3Oval-without.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <h2 class="title is-3">Hardware Experiments</h2>
+    <h3 class="title is-4">Experiments with Two ROSbot 2 Pro Mobile Robots</h3>
+    <div class="columns is-vcentered interpolation-panel">
+      <div class="column has-text-centered">
+        <h5><b>With Adaptive Conformal CBF</b></h5>
+        <h5 style="font-size:30px;">✅</h5>
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/Exp1_with.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <h5><b>Global CP / No CBF</b></h5>
+        <h5 style="font-size:30px;">❌</h5>
+        <div class="video-container">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/Exp1_without.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{suganda2024distributed,
-  author    = {Anonymous Authours},
-  title     = {Formation-Aware Adaptive Conformalized Perception for Safe Leader–Follower Multi-Robot Systems},
-  booktitle = {-},
-  year      = {-},
-  address   = {-},
+    <pre><code>@inproceedings{anonymous2024formation,
+  author    = {Anonymous Authors},
+  title     = {Formation-Aware Adaptive Conformalized Perception for Safe Leader-Follower Multi-Robot Systems},
+  booktitle = {Under Double-Blind Review},
+  year      = {2024},
 }</code></pre>
   </div>
 </section>
@@ -382,11 +288,9 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
+        <div class="content has-text-centered">
           <p>
-            Website borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under a <a
-                    href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
-                    International</a>
+            Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a> license.
           </p>
         </div>
       </div>
