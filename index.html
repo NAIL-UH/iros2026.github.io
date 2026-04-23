@@ -189,11 +189,11 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Simulation Results</h2>
+    <h2 class="title is-3 has-text-centered">Simulation Results (2-Robot Case)</h2>
     
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h3 class="title is-4">Summary Demonstration</h3>
+        <h3 class="title is-4">Leader-Follower Demonstration</h3>
         <div class="video-container summary-video-container">
           <video autoplay controls muted loop playsinline width="100%">
             <source src="./static/videos/Summary_Simulation.mp4" type="video/mp4">
@@ -204,27 +204,10 @@
             This summary video demonstrates the proposed Formation-Aware Adaptive Conformalized Perception framework in a Gazebo simulation. As the leader-follower multi-robot system maneuvers, the Risk-Aware Mondrian CP dynamically adjusts the perception uncertainty bounds. The Conformal CBF-QP safely intervenes when the leader approaches the edge of the follower's Field of View (FOV), successfully maintaining visibility without being overly conservative.
           </p>
         </div>
-        
-        <br>
-        
-        <h3 class="title is-4">3-Robot Formation Demonstration</h3>
-        <div class="video-container summary-video-container">
-          <video autoplay controls muted loop playsinline width="100%">
-            <source src="./static/videos/3RobotVideo.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            This demonstration showcases our framework extended to a 3-robot formation, maintaining robust visibility and tracking performance across multiple agents despite complex maneuvers and perception uncertainties.
-          </p>
-        </div>
-
       </div>
     </div>
 
-    <br><br>
-
-    <br><br>
+    <br>
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
@@ -236,7 +219,7 @@
         </div>
         <div class="content has-text-justified" style="margin-top: 15px;">
           <p>
-            The time-series plots illustrate the dynamic behavior of our proposed Risk-Aware Bound over the course of the simulation. As the robot transitions between safe and risky configurations, the Mondrian CP algorithm dynamically tightens the perception uncertainty margins. This targeted conservatism ensures that the Control Barrier Function cleanly enforces visibility constraints near the FOV boundaries, while permitting smooth control inputs and low tracking errors in nominal regions.
+            The time-series plots illustrate the dynamic behavior of our proposed Risk-Aware Bound over the course of the 2-robot simulation. As the robot transitions between safe and risky configurations, the Mondrian CP algorithm dynamically tightens the perception uncertainty margins. This targeted conservatism ensures that the Control Barrier Function cleanly enforces visibility constraints near the FOV boundaries, while permitting smooth control inputs and low tracking errors in nominal regions.
           </p>
         </div>
 
@@ -248,10 +231,32 @@
         </div>
         <div class="content has-text-justified" style="margin-top: 15px;">
           <p>
-            The summary metrics aggregate the performance across the different bounding strategies to highlight the trade-offs between safety and tracking efficiency. Our <b>Risk-Aware Adaptive CP</b> eliminates out-of-view failures (which plague the Low Risk and Nominal baselines) without incurring the excessive tracking error and controller feasibility issues associated with the strictly conservative High Risk Bound.
+            The summary metrics aggregate the performance across the different bounding strategies to highlight the trade-offs between safety and tracking efficiency in the 2-robot scenario. Our <b>Risk-Aware Adaptive CP</b> eliminates out-of-view failures (which plague the Low Risk and Nominal baselines) without incurring the excessive tracking error and controller feasibility issues associated with the strictly conservative High Risk Bound.
           </p>
         </div>
 
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Extension: 3-Robot Formation</h2>
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="video-container summary-video-container" style="margin-top: 20px;">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/3RobotVideo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            To evaluate scalability, this demonstration showcases our framework extended to a 3-robot formation. The system maintains robust visibility and tracking performance across multiple agents despite complex chain maneuvers and compounded perception uncertainties.
+          </p>
+        </div>
       </div>
     </div>
 
