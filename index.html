@@ -193,7 +193,7 @@
     
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <!-- <h3 class="title is-4">Summary Demonstration</h3> -->
+        <h3 class="title is-4">Summary Demonstration</h3>
         <div class="video-container summary-video-container">
           <video autoplay controls muted loop playsinline width="100%">
             <source src="./static/videos/Summary_Simulation.mp4" type="video/mp4">
@@ -204,60 +204,25 @@
             This summary video demonstrates the proposed Formation-Aware Adaptive Conformalized Perception framework in a Gazebo simulation. As the leader-follower multi-robot system maneuvers, the Risk-Aware Mondrian CP dynamically adjusts the perception uncertainty bounds. The Conformal CBF-QP safely intervenes when the leader approaches the edge of the follower's Field of View (FOV), successfully maintaining visibility without being overly conservative.
           </p>
         </div>
+        
+        <br>
+        
+        <h3 class="title is-4">3-Robot Formation Demonstration</h3>
+        <div class="video-container summary-video-container">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/3RobotVideo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            This demonstration showcases our framework extended to a 3-robot formation, maintaining robust visibility and tracking performance across multiple agents despite complex maneuvers and perception uncertainties.
+          </p>
+        </div>
+
       </div>
     </div>
 
     <br><br>
-
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Comparison of Bounding Strategies</h3>
-        <div class="columns is-multiline comparison-grid">
-          
-          <div class="column is-half">
-            <h5><b>High Risk Bound</b><br>(Conservative Global CP)</h5>
-            <div class="video-container">
-              <video autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/HighRiskBound.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-          <div class="column is-half">
-            <h5><b>Low Risk Bound</b><br>(Aggressive Global CP)</h5>
-            <div class="video-container">
-              <video autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/LowRiskBound.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-          <div class="column is-half">
-            <h5><b>Nominal (No Bound)</b><br>(Standard CBF/No CP)</h5>
-            <div class="video-container">
-              <video autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/NominalBound.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-          <div class="column is-half">
-            <h5><b>Risk-Aware Bound</b><br>(Proposed Adaptive CP) <span style="font-size:20px;">✅</span></h5>
-            <div class="video-container">
-              <video autoplay controls muted loop playsinline width="100%">
-                <source src="./static/videos/RiskAwareBound.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            The videos above compare the proposed <b>Risk-Aware Bound</b> against baseline strategies. Relying on a static <b>High Risk Bound</b> is overly conservative, unnecessarily restricting normal formation maneuvers and reducing performance. Conversely, a <b>Low Risk Bound</b> or <b>Nominal</b> approach fails to account for the heavy-tailed perception errors near the FOV limits, ultimately leading to constraint violations (losing the leader from the camera view). Our adaptive Mondrian CP method successfully balances performance and safety by tightening bounds only when necessary.
-          </p>
-        </div>
-      </div>
-    </div> -->
 
     <br><br>
 
